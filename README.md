@@ -1,4 +1,4 @@
-# musify
+# Play.co
 
 A new Flutter project.
 
