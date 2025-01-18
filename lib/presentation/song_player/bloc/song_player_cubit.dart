@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:musify/core/config/constants/app_urls.dart';
 import 'package:musify/domain/entities/song/song.dart';
 import 'package:musify/presentation/song_player/bloc/song_player_state.dart';
 
@@ -31,12 +33,25 @@ class SongPlayerCubit extends Cubit<SongPlayerState> {
     emit(SongPlayerLoading());
     currentSong = song;
     try {
-      await audioPlayer.setUrl(url);
+      final audioSource = AudioSource.uri(
+        Uri.parse(url),
+        tag: MediaItem(
+          id: song.songId, // A unique ID for the song
+          album: 'Unknown Album',
+          title: song.title,
+          artist: song.artist,
+          artUri: Uri.parse(
+              '${AppUrls.coverFirestorage}${song.artist} - ${song.title}.jpg?${AppUrls.mediaAlt}'), // Song artwork URL
+        ),
+      );
+
+      await audioPlayer.setAudioSource(audioSource);
       audioPlayer.play();
       _updateSongPlayerState();
 
-      // emit(SongPlayerLoaded(song,
-      //     position: songPosition, duration: songDuration, isPlaying: true));
+      // await audioPlayer.setUrl(url);
+      // audioPlayer.play();
+      // _updateSongPlayerState();
     } catch (e) {
       emit(SongPlayerFailure());
     }

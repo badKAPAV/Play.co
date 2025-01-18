@@ -31,7 +31,7 @@ class HomeNavPage extends StatelessWidget {
         BlocProvider(
           create: (context) => BottomNavigationCubit(),
         ),
-        BlocProvider(create: (context) => SongPlayerCubit()),
+        //BlocProvider(create: (context) => SongPlayerCubit()),
         BlocProvider(
           create: (context) => HomeCubit(
             songRepository: context.read<SongsRepository>(),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'package:musify/common/bloc/auth/auth_cubit.dart';
 import 'package:musify/common/bloc/auth/auth_state.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
@@ -19,6 +20,16 @@ import 'package:path_provider/path_provider.dart';
 import 'package:musify/data/sources/auth/auth_firebase_service.dart';
 
 Future<void> main() async {
+  try {
+    await JustAudioBackground.init(
+      androidNotificationChannelId: 'com.example.musify.channel.audio',
+      androidNotificationChannelName: 'Musify Audio Playback',
+      androidNotificationOngoing: true,
+    );
+    print('just_audio_background initialized successfully');
+  } catch (e) {
+    print('Failed to initialize just_audio_background: $e');
+  }
   WidgetsFlutterBinding.ensureInitialized();
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: kIsWeb
@@ -48,7 +59,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ThemeCubit(),
         ),
-        BlocProvider(create: (_) => SongPlayerCubit()),
+        BlocProvider(create: (context) => SongPlayerCubit()),
         BlocProvider(
           create: (context) => AuthCubit()..checkAuthState(),
         ),
