@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:musify/common/bloc/auth/auth_cubit.dart';
 import 'package:musify/common/bloc/auth/auth_state.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/common/widgets/appbar/app_bar.dart';
-import 'package:musify/core/config/assets/app_vectors.dart';
 import 'package:musify/core/config/theme/app_colors.dart';
-import 'package:musify/domain/entities/auth/user.dart';
 import 'package:musify/presentation/home/pages/home_nav.dart';
-import 'package:musify/presentation/library/widgets/playlist_page.dart';
 import 'package:musify/presentation/profile/bloc/liked_songs_cubit.dart';
 import 'package:musify/presentation/profile/bloc/liked_songs_state.dart';
 

@@ -12,12 +12,10 @@ import 'package:musify/core/config/theme/app_theme.dart';
 import 'package:musify/firebase_options.dart';
 import 'package:musify/presentation/auth/pages/signin.dart';
 import 'package:musify/presentation/choose_mode/bloc/theme_cubit.dart';
-import 'package:musify/presentation/home/pages/home.dart';
 import 'package:musify/presentation/home/pages/home_nav.dart';
 import 'package:musify/presentation/song_player/bloc/song_player_cubit.dart';
 import 'package:musify/service_locator.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:musify/data/sources/auth/auth_firebase_service.dart';
 
 Future<void> main() async {
   try {

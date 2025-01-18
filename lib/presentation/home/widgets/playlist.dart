@@ -142,12 +142,16 @@ class _PlaylistState extends State<Playlist>
                   Text(
                     songs[index].title,
                     style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),
+                        fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                   Text(
                     songs[index].artist,
-                    style: const TextStyle(
-                        fontSize: 12, fontWeight: FontWeight.normal),
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        color: context.isDarkMode
+                            ? AppColors.darkModeTextSecondary
+                            : AppColors.lightModeTextSecondary),
                   ),
                 ],
               ),

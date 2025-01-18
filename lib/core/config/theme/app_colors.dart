@@ -9,4 +9,7 @@ class AppColors {
   static const lightGrey = Color(0xffE6E6E6);
   static const grey = Color(0xffBEBEBE);
   static const darkGrey = Color(0xff343434);
+
+  static const darkModeTextSecondary = Color.fromARGB(255, 179, 179, 179);
+  static const lightModeTextSecondary = Color.fromARGB(255, 41, 41, 41);
 }

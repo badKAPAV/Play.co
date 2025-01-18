@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/common/widgets/appbar/app_bar.dart';
 import 'package:musify/common/widgets/button/basic_app_button.dart';
-import 'package:musify/core/config/assets/app_vectors.dart';
 import 'package:musify/core/config/theme/app_colors.dart';
 import 'package:musify/data/models/auth/create_user_req.dart';
 import 'package:musify/domain/usecases/auth/signup.dart';

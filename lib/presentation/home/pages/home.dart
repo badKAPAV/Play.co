@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:musify/common/bloc/auth/auth_cubit.dart';
 import 'package:musify/common/bloc/auth/auth_state.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/common/widgets/appbar/app_bar.dart';
-import 'package:musify/core/config/assets/app_images.dart';
-import 'package:musify/core/config/assets/app_vectors.dart';
 import 'package:musify/core/config/theme/app_colors.dart';
-import 'package:musify/domain/entities/auth/user.dart';
 import 'package:musify/presentation/home/pages/home_nav.dart';
 import 'package:musify/presentation/home/widgets/new_songs.dart';
 import 'package:musify/presentation/home/widgets/playlist.dart';
-import 'package:musify/presentation/profile/pages/profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

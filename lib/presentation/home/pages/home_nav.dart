@@ -5,12 +5,9 @@ import 'package:musify/common/bloc/bottom_nav_bar/bottom_navigation_cubit.dart';
 import 'package:musify/common/bloc/home/home_cubit.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/core/config/theme/app_colors.dart';
-import 'package:musify/data/sources/auth/auth_firebase_service.dart';
 import 'package:musify/domain/repository/song/song.dart';
 import 'package:musify/presentation/choose_mode/bloc/theme_cubit.dart';
-import 'package:musify/presentation/home/pages/home.dart';
 import 'package:musify/presentation/library/navigation/library_navigation.dart';
-import 'package:musify/presentation/library/pages/library.dart';
 import 'package:musify/presentation/profile/navigation/profile_navigation.dart';
 import 'package:musify/presentation/profile/pages/profile.dart';
 import 'package:musify/presentation/search/pages/search.dart';
@@ -159,7 +156,7 @@ class BottomNavBar extends StatelessWidget {
         Positioned(
             left: 0,
             right: 0,
-            bottom: 3,
+            bottom: 0,
             child: BlocBuilder<SongPlayerCubit, SongPlayerState>(
                 builder: (context, state) {
               if (state is SongPlayerLoaded) {
@@ -187,8 +184,8 @@ class BottomNavBar extends StatelessWidget {
                 selectedIcon: Icon(Icons.search_rounded),
                 label: 'Browse'),
             NavigationDestination(
-                icon: Icon(Icons.library_books_outlined),
-                selectedIcon: Icon(Icons.library_books_rounded),
+                icon: Icon(Icons.book_outlined),
+                selectedIcon: Icon(Icons.book_rounded),
                 label: 'Collections'),
           ],
           selectedIndex: currentIndex,

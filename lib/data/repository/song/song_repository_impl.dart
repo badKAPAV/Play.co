@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:musify/data/sources/song/song_firebase_service.dart';
 import 'package:musify/domain/entities/song/song.dart';
 import 'package:musify/domain/repository/song/song.dart';
-import 'package:musify/service_locator.dart';
 
 class SongRepositoryImpl extends SongsRepository {
   final SongFirebaseService _firebaseService;

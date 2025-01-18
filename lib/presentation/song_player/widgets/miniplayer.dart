@@ -59,7 +59,9 @@ class _MiniplayerState extends State<Miniplayer> {
       // In dark mode, ensure color isn't too bright
       return hsl.lightness > 0.3
           ? hsl.withLightness(0.3).toColor()
-          : hsl.toColor();
+          : hsl.lightness < 0.2
+              ? hsl.withLightness(0.2).toColor()
+              : hsl.toColor();
     } else {
       // In light mode, ensure color isn't too dark
       return hsl.lightness < 0.5
@@ -141,10 +143,10 @@ class _MiniplayerState extends State<Miniplayer> {
         //   width: 20,
         // ),
         Container(
-          height: 45,
-          width: 45,
+          height: 40,
+          width: 40,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(7),
               image: DecorationImage(
                   image: CachedNetworkImageProvider(
                 '${AppUrls.coverFirestorage}${widget.songEntity.artist} - ${widget.songEntity.title}.jpg?${AppUrls.mediaAlt}',

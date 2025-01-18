@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/common/widgets/appbar/app_bar.dart';
 import 'package:musify/core/config/constants/app_urls.dart';
 import 'package:musify/core/config/theme/app_colors.dart';
@@ -124,12 +125,16 @@ Widget _playlist(BuildContext context) {
                             Text(
                               state.likedSongs[index].title,
                               style: const TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
+                                  fontSize: 16, fontWeight: FontWeight.w500),
                             ),
                             Text(
                               state.likedSongs[index].artist,
-                              style: const TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.normal),
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: context.isDarkMode
+                                      ? AppColors.darkModeTextSecondary
+                                      : AppColors.lightModeTextSecondary),
                             ),
                           ],
                         ),

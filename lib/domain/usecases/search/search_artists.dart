@@ -3,7 +3,6 @@ import 'package:musify/core/error/failures.dart';
 import 'package:musify/core/usecase/usecase.dart';
 import 'package:musify/domain/entities/song/song.dart';
 import 'package:musify/domain/repository/search/search.dart';
-import 'package:musify/service_locator.dart';
 
 class SearchArtistsUseCase
     implements UseCase<Either<Failure, List<SongEntity>>, String> {

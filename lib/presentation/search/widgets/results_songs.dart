@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:musify/common/helpers/is_dark_mode.dart';
 import 'package:musify/core/config/constants/app_urls.dart';
+import 'package:musify/core/config/theme/app_colors.dart';
 import 'package:musify/domain/entities/song/song.dart';
 import 'package:musify/presentation/search/bloc/song_search_cubit.dart';
 import 'package:musify/presentation/search/bloc/song_search_state.dart';
@@ -137,12 +138,16 @@ class ResultsSongs extends StatelessWidget {
                     Text(
                       songs[index].title,
                       style: const TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.bold),
+                          fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                     Text(
                       songs[index].artist,
-                      style: const TextStyle(
-                          fontSize: 12, fontWeight: FontWeight.normal),
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: context.isDarkMode
+                              ? AppColors.darkModeTextSecondary
+                              : AppColors.lightModeTextSecondary),
                     ),
                   ],
                 ),

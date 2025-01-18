@@ -132,7 +132,7 @@ class _NewSongsState extends State<NewSongs>
                     child: Text(
                       songs[index].title,
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 16),
+                          fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                   ),
                   const SizedBox(
@@ -142,8 +142,12 @@ class _NewSongsState extends State<NewSongs>
                     alignment: Alignment.centerLeft,
                     child: Text(
                       songs[index].artist,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.normal, fontSize: 13),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                          color: context.isDarkMode
+                              ? AppColors.darkModeTextSecondary
+                              : AppColors.lightModeTextSecondary),
                     ),
                   )
                 ],
