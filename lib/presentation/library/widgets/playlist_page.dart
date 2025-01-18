@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:musify/common/widgets/appbar/app_bar.dart';
 import 'package:musify/core/config/constants/app_urls.dart';
+import 'package:musify/core/config/theme/app_colors.dart';
 import 'package:musify/presentation/profile/bloc/liked_songs_cubit.dart';
 import 'package:musify/presentation/profile/bloc/liked_songs_state.dart';
 import 'package:musify/presentation/song_player/bloc/song_player_cubit.dart';
@@ -13,6 +14,7 @@ class PlaylistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.darkBackground,
       extendBodyBehindAppBar: true,
       appBar: const BasicAppBar(),
       body: SingleChildScrollView(

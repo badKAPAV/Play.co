@@ -45,6 +45,7 @@ class _SearchPageState extends State<SearchPage>
               create: (_) => ArtistSearchCubit(sl<SearchArtistsUseCase>())),
         ],
         child: Scaffold(
+          backgroundColor: AppColors.darkBackground,
           appBar: BasicAppBar(
             appbarHeight: height / 6.5,
             hideBack: true,

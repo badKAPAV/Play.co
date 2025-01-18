@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
+      backgroundColor: AppColors.darkBackground,
       appBar: BasicAppBar(
           hideBack: true,
           leading: BlocBuilder<AuthCubit, AuthState>(
