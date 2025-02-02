@@ -84,7 +84,8 @@ class _NewSongsState extends State<NewSongs>
                       Uri.encodeComponent(songs[index].artist +
                           ' - ' +
                           songs[index].title +
-                          '.mp3') +
+                          '.' +
+                          songs[index].fileType) +
                       '?' +
                       AppUrls.mediaAlt,
                   songs[index]);

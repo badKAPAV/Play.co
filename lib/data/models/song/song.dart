@@ -7,6 +7,7 @@ class SongModel {
   num? duration;
   Timestamp? releaseDate;
   bool? isFavorite;
+  String? fileType;
   String? songId;
 
   SongModel(
@@ -15,6 +16,7 @@ class SongModel {
       required this.duration,
       required this.releaseDate,
       required this.isFavorite,
+      required this.fileType,
       required this.songId});
 
   SongModel.fromJson(Map<String, dynamic> data) {
@@ -24,6 +26,7 @@ class SongModel {
     releaseDate = data['releaseDate'];
     isFavorite = data['isFavorite'];
     songId = data['songId'];
+    fileType = data['fileType'];
   }
 }
 
@@ -36,6 +39,7 @@ extension SongModelX on SongModel {
       duration: duration!,
       releaseDate: releaseDate!,
       songId: songId!,
+      fileType: fileType!,
     );
   }
 }

@@ -6,11 +6,13 @@ class PlaylistEntity {
   final bool isFavorite;
   final String description;
   final Timestamp dateCreated;
+  final String type;
   final String playlistId;
 
   PlaylistEntity(
       {required this.playlistId,
       required this.title,
+      required this.type,
       required this.createdBy,
       required this.isFavorite,
       required this.description,

@@ -94,7 +94,8 @@ class ResultsArtists extends StatelessWidget {
                       Uri.encodeComponent(songs[index].artist +
                           ' - ' +
                           songs[index].title +
-                          '.mp3') +
+                          '.' +
+                          songs[index].fileType) +
                       '?' +
                       AppUrls.mediaAlt,
                   songs[index]);

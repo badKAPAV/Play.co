@@ -99,7 +99,8 @@ Widget _playlist(BuildContext context) {
                                   state.likedSongs[index].artist +
                                       ' - ' +
                                       state.likedSongs[index].title +
-                                      '.mp3') +
+                                      '.' +
+                                      state.likedSongs[index].fileType) +
                               '?' +
                               AppUrls.mediaAlt,
                           state.likedSongs[index]);

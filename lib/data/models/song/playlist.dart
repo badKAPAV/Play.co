@@ -5,6 +5,7 @@ class PlaylistModel {
   String? playlistId;
   String? title;
   String? createdBy;
+  String? type;
   Timestamp? dateCreated;
   String? description;
   bool? isFavorite;
@@ -13,6 +14,7 @@ class PlaylistModel {
       {required this.playlistId,
       required this.createdBy,
       required this.title,
+      required this.type,
       required this.dateCreated,
       required this.isFavorite,
       required this.description});
@@ -24,6 +26,7 @@ class PlaylistModel {
     dateCreated = data['dateCreated'];
     description = data['description'];
     isFavorite = data['isFavorite'];
+    type = data['type'];
   }
 }
 
@@ -36,6 +39,7 @@ extension PlaylistModelX on PlaylistModel {
       dateCreated: dateCreated!,
       description: description!,
       isFavorite: isFavorite!,
+      type: type!,
     );
   }
 }
