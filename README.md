@@ -1,6 +1,6 @@
 # Play.co
 
-A new Flutter project.
+A music streaming application made using Flutter and Firebase using Bloc and Cubit for Advanced State Management. Users can upload and stream music in the app. It also supports high quality music (.flac). Its minimalistic yet useful UI is very easy to use.
 
 ## Getting Started
 
