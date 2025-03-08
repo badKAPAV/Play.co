@@ -45,3 +45,4 @@ Play.co is a modern music streaming app built with **Flutter**, following **clea
    https://github.com/badKAPAV/Play.co.git
    cd play.co
 
+For queries, contact kapav.dev@gmail.com
