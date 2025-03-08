@@ -1,6 +1,6 @@
-# Play.co
+# 🎵 Play.co - A Music App for Creators, by Creators
 
-A music streaming application made using Flutter and Firebase using Bloc and Cubit for Advanced State Management. Users can upload and stream music in the app. It also supports high quality music (.flac). Its minimalistic yet useful UI is very easy to use.
+Play.co is a modern music streaming app built with **Flutter**, following **clean architecture** principles. It uses **Bloc (Cubit)** for state management and **Firebase** as the backend. Play.co lets users search for songs, enjoy smooth animations, and will soon allow creators to upload and share their own music with the world.
 
 ## Getting Started
 
