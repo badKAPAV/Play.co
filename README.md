@@ -42,6 +42,6 @@ Play.co is a modern music streaming app built with **Flutter**, following **clea
 ### Installation
 1. Clone the repository:
    ```sh
-   [git clone https://github.com/yourusername/playco.git](https://github.com/badKAPAV/Play.co.git)
-   cd playco
+   https://github.com/badKAPAV/Play.co.git
+   cd play.co
 
